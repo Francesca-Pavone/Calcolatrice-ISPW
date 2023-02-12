@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane fx:id="parent" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="335.0" styleClass="background" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.calcolatrice.Controller">
+   <children>
+      <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="335.0" styleClass="background">
+         <children>
+            <Button fx:id="moonLight_button" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#changeMode" prefHeight="40.0" prefWidth="40.0" styleClass="moon-light-button">
+               <VBox.margin>
+                  <Insets left="15.0" top="15.0" />
+               </VBox.margin>
+               <graphic>
+                  <ImageView fx:id="moonLight_image" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" styleClass="moon-light-image">
+                     <image>
+                        <Image url="@moon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Label fx:id="historyLabel" nodeOrientation="RIGHT_TO_LEFT" prefHeight="25.0" prefWidth="335.0" styleClass="history-label">
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" top="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="resultLabel" nodeOrientation="RIGHT_TO_LEFT" prefHeight="60.0" prefWidth="335.0" styleClass="result-label">
+               <font>
+                  <Font name="System Bold" size="40.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </VBox.margin>
+            </Label>
+            <GridPane alignment="CENTER" hgap="15.0" prefHeight="403.0" prefWidth="295.0" vgap="15.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="60.0" prefWidth="60.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="60.0" prefWidth="60.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="60.0" prefWidth="60.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="60.0" prefWidth="60.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="-Infinity" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="-Infinity" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="-Infinity" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="-Infinity" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="-Infinity" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="-Infinity" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Button fx:id="cancella_but" mnemonicParsing="false" onAction="#clearAll" styleClass="cancel-buttton" text="C" GridPane.rowIndex="1" />
+                  <Button fx:id="radice_but" mnemonicParsing="false" onAction="#singleMemberOperation" styleClass="operation-buttons" text="√x" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="sin_but" mnemonicParsing="false" onAction="#singleMemberOperation" styleClass="little-operation-buttons" text="sin" GridPane.columnIndex="2">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="cos_but" mnemonicParsing="false" onAction="#singleMemberOperation" prefHeight="30.0" styleClass="little-operation-buttons" text="cos" GridPane.columnIndex="3">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="quadrato_but" mnemonicParsing="false" onAction="#singleMemberOperation" styleClass="operation-buttons" text="x²" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <Button fx:id="divisione_but" mnemonicParsing="false" onAction="#simpleOperation" styleClass="orange-operation-buttons" text="÷" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                  <Button fx:id="uno_but" mnemonicParsing="false" onAction="#insertValue" styleClass="number-buttons" text="1" GridPane.rowIndex="2" />
+                  <Button fx:id="due_but" mnemonicParsing="false" onAction="#insertValue" styleClass="number-buttons" text="2" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Button fx:id="tre_but" mnemonicParsing="false" onAction="#insertValue" styleClass="number-buttons" text="3" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <Button fx:id="moltiplicazione_but" mnemonicParsing="false" onAction="#simpleOperation" styleClass="orange-operation-buttons" text="×" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                  <Button fx:id="quattro_but" mnemonicParsing="false" onAction="#insertValue" styleClass="number-buttons" text="4" GridPane.rowIndex="3" />
+                  <Button fx:id="cinque_but" mnemonicParsing="false" onAction="#insertValue" styleClass="number-buttons" text="5" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Button fx:id="sei_but" mnemonicParsing="false" onAction="#insertValue" styleClass="number-buttons" text="6" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                  <Button fx:id="sottrazione_but" mnemonicParsing="false" onAction="#simpleOperation" styleClass="orange-operation-buttons" text="−" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                  <Button fx:id="sette_but" mnemonicParsing="false" onAction="#insertValue" styleClass="number-buttons" text="7" GridPane.rowIndex="4">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </Button>
+                  <Button fx:id="otto_but" mnemonicParsing="false" onAction="#insertValue" styleClass="number-buttons" text="8" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </Button>
+                  <Button fx:id="nove_but" mnemonicParsing="false" onAction="#insertValue" styleClass="number-buttons" text="9" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </Button>
+                  <Button fx:id="somma_but" mnemonicParsing="false" onAction="#simpleOperation" styleClass="orange-operation-buttons" text="+" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </Button>
+                  <Button fx:id="zero_but" mnemonicParsing="false" onAction="#insertValue" styleClass="number-buttons" text="0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </Button>
+                  <Button fx:id="punto_but" mnemonicParsing="false" onAction="#insertValue" styleClass="operation-buttons" text="." GridPane.columnIndex="2" GridPane.rowIndex="5">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </Button>
+                  <Button fx:id="uguale_but" mnemonicParsing="false" onAction="#simpleOperation" styleClass="equal-button" text="=" GridPane.columnIndex="3" GridPane.rowIndex="5">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </Button>
+                  <Button fx:id="cahngeSign_butt" mnemonicParsing="false" onAction="#changeSign" styleClass="operation-buttons" text="±" GridPane.rowIndex="5" />
+                  <Button mnemonicParsing="false" onAction="#singleMemberOperation" styleClass="little-operation-buttons" text="ln" />
+                  <Button fx:id="log_but" mnemonicParsing="false" onAction="#singleMemberOperation" styleClass="little-operation-buttons" text="log" GridPane.columnIndex="1" />
+               </children>
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" top="25.0" />
+               </VBox.margin>
+               <effect>
+                  <DropShadow height="1.5" radius="0.25" spread="0.05" width="1.5" />
+               </effect>
+            </GridPane>
+         </children>
+      </VBox>
+   </children>
+</Pane>

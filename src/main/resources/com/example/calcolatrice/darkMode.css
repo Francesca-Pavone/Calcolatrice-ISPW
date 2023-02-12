@@ -1,0 +1,111 @@
+.result-label {
+    -fx-font-family: "System";
+    -fx-font-weight: bold;
+    -fx-font-size: 40;
+    -fx-text-fill: white;
+}
+
+.history-label{
+    -fx-font-family: "System";
+    -fx-font-weight: bold;
+    -fx-font-size: 14;
+    -fx-text-fill: white;
+}
+
+.number-buttons {
+    -fx-background-radius: 10;
+    -fx-background-color: #666;
+    -fx-alignment: center ;
+    -fx-border-color: #666;
+    -fx-border-radius: 10;
+    -fx-font-family: "Arial";
+    -fx-font-weight: bold;
+    -fx-font-size: 20;
+    -fx-text-fill: white;
+    -fx-pref-width: 60;
+    -fx-pref-height: 50;
+}
+
+.operation-buttons {
+    -fx-background-radius: 10;
+    -fx-background-color: #666;
+    -fx-alignment: center ;
+    -fx-border-color: #666;
+    -fx-border-radius: 10;
+    -fx-font-family: "Arial";
+    -fx-font-size: 20;
+    -fx-text-fill: white;
+    -fx-pref-width: 60;
+    -fx-pref-height: 50;
+}
+
+.little-operation-buttons {
+    -fx-background-radius: 10;
+    -fx-background-color: #666;
+    -fx-alignment: center ;
+    -fx-border-color: #666;
+    -fx-border-radius: 10;
+    -fx-font-family: "Arial";
+    -fx-font-size: 14;
+    -fx-text-fill: white;
+    -fx-row-valignment: bottom;
+    -fx-pref-width: 60;
+    -fx-pref-height: 30;
+}
+
+.orange-operation-buttons{
+    -fx-background-radius: 10;
+    -fx-background-color: #ffa500;
+    -fx-alignment: center ;
+    -fx-border-color: #ffa500;
+    -fx-border-radius: 10;
+    -fx-font-family: "Arial";
+    -fx-font-size: 20;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-pref-width: 60;
+    -fx-pref-height: 50;
+}
+
+
+.cancel-buttton {
+    -fx-background-radius: 10;
+    -fx-background-color: #6b0f24;
+    -fx-alignment: center ;
+    -fx-border-color: #6b0f24;
+    -fx-border-radius: 10;
+    -fx-font-family: "Arial";
+    -fx-font-size: 20;
+    -fx-font-weight: bold;
+    -fx-text-fill: #8e244d;
+    -fx-pref-width: 60;
+    -fx-pref-height: 50;
+}
+
+
+.equal-button {
+    -fx-background-radius: 10;
+    -fx-background-color: #00ff00;
+    -fx-alignment: center ;
+    -fx-border-color: #00ff00;
+    -fx-border-radius: 10;
+    -fx-font-family: "Arial";
+    -fx-font-size: 24;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-pref-width: 60;
+    -fx-pref-height: 50;
+}
+
+.moon-light-button {
+    -fx-background-radius: 50;
+    -fx-background-color: #666;
+}
+
+.moon-light-image {
+    -fx-image: url(sun.png);
+}
+
+.background {
+    -fx-background-color: #464646;
+}
