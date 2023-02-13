@@ -1,38 +1,38 @@
 package com.example.calcolatrice;
 
 public class Calculation {
-    public double calculateSingleMemberOperations(double first_operand, String operationToDo) {
+    public double calculateSingleMemberOperations(double firstOperand, String operationToDo) {
         switch (operationToDo) {
 
             case "√x":
-                return Math.sqrt(first_operand);
+                return Math.sqrt(firstOperand);
             case "x²":
-                return first_operand * first_operand;
+                return firstOperand * firstOperand;
             case "log":
-                return Math.log10(first_operand);
+                return Math.log10(firstOperand);
             case "ln":
-                return Math.log(first_operand);
+                return Math.log(firstOperand);
             case "sin":
-                return Math.sin(first_operand);
+                return Math.sin(firstOperand);
             case "cos":
-                return Math.cos(first_operand);
+                return Math.cos(firstOperand);
             default:
                 break;
         }
         return 0;
     }
 
-    public double calculateSimpleOperations(double first_operand, double second_operand, String operationToDo) {
+    public double calculateSimpleOperations(double firstOperand, double secondOperand, String operationToDo) {
         switch (operationToDo) {
 
             case "÷":
-                return first_operand / second_operand;
+                return firstOperand / secondOperand;
             case "×":
-                return first_operand * second_operand;
+                return firstOperand * secondOperand;
             case "−":
-                return first_operand - second_operand;
+                return firstOperand - secondOperand;
             case "+":
-                return first_operand + second_operand;
+                return firstOperand + secondOperand;
             default:
                 break;
         }

@@ -11,12 +11,12 @@
    <children>
       <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="335.0" styleClass="background">
          <children>
-            <Button fx:id="moonLight_button" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#changeMode" prefHeight="40.0" prefWidth="40.0" styleClass="moon-light-button">
+            <Button fx:id="moonLightButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#changeMode" prefHeight="40.0" prefWidth="40.0" styleClass="moon-light-button">
                <VBox.margin>
                   <Insets left="15.0" top="15.0" />
                </VBox.margin>
                <graphic>
-                  <ImageView fx:id="moonLight_image" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" styleClass="moon-light-image">
+                  <ImageView fx:id="moonLightImage" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" styleClass="moon-light-image">
                      <image>
                         <Image url="@moon.png" />
                      </image>

@@ -9,9 +9,10 @@ import javafx.scene.image.ImageView;
 import java.util.Objects;
 
 public class Controller {
-
-    public Button moonLight_button;
-    public ImageView moonLight_image;
+    @FXML
+    public Button moonLightButton;
+    @FXML
+    public ImageView moonLightImage;
     @FXML
     private Label resultLabel;
     @FXML
@@ -19,7 +20,7 @@ public class Controller {
 
     private boolean isLightMode = true;
 
-    private double first_operand = 0;
+    private double firstOperand = 0;
 
     private String operationToDo = "";
 
@@ -76,23 +77,23 @@ public class Controller {
         if(!operationToDo.isEmpty())
             return;
         operationToDo = value;
-        first_operand = Float.parseFloat(resultLabel.getText());
+        firstOperand = Float.parseFloat(resultLabel.getText());
         resultLabel.setText("");
 
         if(startFromResult)
             historyLabel.setText("");
 
         if(operationToDo.equals("x²")) {
-            historyLabel.setText(historyLabel.getText() + "(" + first_operand + ")" + "²");
+            historyLabel.setText(historyLabel.getText() + "(" + firstOperand + ")" + "²");
 
         }else if(operationToDo.equals("√x")){
-            historyLabel.setText(historyLabel.getText() + "√" + "(" + first_operand + ")");
+            historyLabel.setText(historyLabel.getText() + "√" + "(" + firstOperand + ")");
 
         }else {
-            historyLabel.setText(historyLabel.getText() + operationToDo + "(" + first_operand + ")");
+            historyLabel.setText(historyLabel.getText() + operationToDo + "(" + firstOperand + ")");
         }
 
-        double result = calculation.calculateSingleMemberOperations(first_operand, operationToDo);
+        double result = calculation.calculateSingleMemberOperations(firstOperand, operationToDo);
         if(result<0){
             positiveSign = false;
         }
@@ -110,21 +111,21 @@ public class Controller {
             if(!operationToDo.isEmpty())
                 return;
             operationToDo = value;
-            first_operand = Float.parseFloat(resultLabel.getText());
+            firstOperand = Float.parseFloat(resultLabel.getText());
             if(startFromResult)
                 historyLabel.setText("");
-            historyLabel.setText(historyLabel.getText() + first_operand + operationToDo );
+            historyLabel.setText(historyLabel.getText() + firstOperand + operationToDo );
             resultLabel.setText("");
 
         }else{
             if(operationToDo.isEmpty())
                 return;
-            double second_operand = Float.parseFloat(resultLabel.getText());
-            double result = calculation.calculateSimpleOperations(first_operand, second_operand, operationToDo);
+            double secondOperand = Float.parseFloat(resultLabel.getText());
+            double result = calculation.calculateSimpleOperations(firstOperand, secondOperand, operationToDo);
             if(result<0){
                 positiveSign = false;
             }
-            historyLabel.setText(historyLabel.getText() + second_operand + "=" + result);
+            historyLabel.setText(historyLabel.getText() + secondOperand + "=" + result);
             resultLabel.setText(String.valueOf(result));
             startFromResult = true;
             operationToDo = "";
