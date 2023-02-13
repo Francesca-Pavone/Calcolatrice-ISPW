@@ -35,13 +35,13 @@ public class Controller {
     public void changeMode(ActionEvent event){
         isLightMode = !isLightMode;
         if(!isLightMode){
-            Main.stage.getScene().getStylesheets().clear();
-            Main.stage.getScene().setUserAgentStylesheet(null);
-            Main.stage.getScene().getStylesheets().add(Objects.requireNonNull(getClass().getResource("darkMode.css")).toExternalForm());
+            Main.getStage().getScene().getStylesheets().clear();
+            Main.getStage().getScene().setUserAgentStylesheet(null);
+            Main.getStage().getScene().getStylesheets().add(Objects.requireNonNull(getClass().getResource("darkMode.css")).toExternalForm());
         }else {
-            Main.stage.getScene().getStylesheets().clear();
-            Main.stage.getScene().setUserAgentStylesheet(null);
-            Main.stage.getScene().getStylesheets().add(Objects.requireNonNull(getClass().getResource("lightMode.css")).toExternalForm());
+            Main.getStage().getScene().getStylesheets().clear();
+            Main.getStage().getScene().setUserAgentStylesheet(null);
+            Main.getStage().getScene().getStylesheets().add(Objects.requireNonNull(getClass().getResource("lightMode.css")).toExternalForm());
         }
     }
 
