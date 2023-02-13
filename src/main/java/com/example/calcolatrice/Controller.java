@@ -44,8 +44,6 @@ public class Controller {
         }
     }
 
-
-
     @FXML
     public void insertValue(ActionEvent event){
         if(start){
@@ -132,7 +130,6 @@ public class Controller {
             operationToDo = "";
         }
     }
-
 
     @FXML
     public void clearAll(ActionEvent event){
